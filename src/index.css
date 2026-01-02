@@ -1,0 +1,9 @@
+/* src/index.css */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #02010a !important; /* Deep Dark Figma Background */
+  color: white;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+}
