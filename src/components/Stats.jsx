@@ -1,47 +1,77 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Stats.css';
+import statsLogo from '../assets/StatsIcon.png'; 
 
 const Stats = () => {
-  const [count, setCount] = useState(0);
+  const [percent, setPercent] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      if (entries[0].isIntersecting) {
-        let start = 0;
-        const interval = setInterval(() => {
-          start += 1;
-          if (start >= 90) { setCount(90); clearInterval(interval); }
-          else { setCount(start); }
-        }, 20);
-      }
-    }, { threshold: 0.5 });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
+      },
+      { threshold: 0.5 }
+    );
 
-    observer.observe(sectionRef.current);
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (isVisible) {
+      let start = 0;
+      const end = 90;
+      const interval = setInterval(() => {
+        start += 1;
+        if (start >= end) {
+          setPercent(end);
+          clearInterval(interval);
+        } else {
+          setPercent(start);
+        }
+      }, 15);
+      return () => clearInterval(interval);
+    } else {
+      setPercent(0);
+    }
+  }, [isVisible]);
+
   return (
-    <section className="stats-outer" ref={sectionRef}>
+    <section className="stats-main-sec" ref={sectionRef}>
       <div className="container">
-        <div className="stats-glass-box row align-items-center m-0">
-          <div className="col-md-5 left-content-slide">
-             <div className="d-flex align-items-center gap-4 text-start">
-                <div className="purple-hex-icon"><i className="fa-solid fa-microchip"></i></div>
-                <div>
-                   <h4 className="fw-bold m-0">Engineering the <br/> Future with AI</h4>
-                   <p className="small text-secondary mt-1">Smart systems, smarter growth. Innovation led solutions.</p>
-                </div>
-             </div>
-          </div>
+        <div className="stats-compact-frame">
+          <div className="stats-flex-container">
+            
+            <div className={`stats-left-side ${isVisible ? 'slide-left' : 'init-left'}`}>
+              <div className="stats-large-img">
+                <img src={statsLogo} alt="AI Icon" />
+              </div>
+              <div className="stats-text-content">
+                <h2>Engineering the <br /> Future with AI</h2>
+                <p>Smart systems, smarter growth. Let innovation <br /> lead your business forward.</p>
+              </div>
+            </div>
 
-          <div className="col-md-2 divider-vertical">
-             <h1 className="percentage-counter">{count}%</h1>
-          </div>
 
-          <div className="col-md-5 right-content-slide text-start ps-5">
-             <h4 className="fw-bold m-0">Secure. Smart. <br/> Scalable.</h4>
-             <p className="small text-secondary mt-1">AI-led systems with real-time protection, driving reliable performance.</p>
+            <div className="stats-mid-line"></div>
+
+            <div className={`stats-right-side ${isVisible ? 'slide-right' : 'init-right'}`}>
+              <h1 className="compact-counter">{percent}%</h1>
+              <div className="stats-text-content ms-4">
+                <h2>Secure. Smart. <br /> Scalable.</h2>
+                <p>AI-led systems with real-time protection, <br /> driving reliable performance at scale.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
