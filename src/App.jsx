@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Hero />
       <Stats />
-      {/* Mazeed sections yahan ayenge */}
+      
     </div>
   );
 }

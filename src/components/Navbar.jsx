@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import logo from '../assets/meta-logo.png'; // Make sure the logo name is exactly 'Logo.png'
+import logo from '../assets/meta-logo.png'; 
 
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <div className="main-nav-wrapper">
-      {/* 1. TOP HEADER (Hide on scroll) */}
+      
       <div className={`top-promo-header ${isSticky ? 'hide-header' : ''}`}>
         <div className="container d-flex justify-content-between align-items-center">
           <p className="m-0">
@@ -27,16 +27,16 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* 2. MAIN NAVBAR */}
+      
       <nav className={`navbar-meta ${isSticky ? 'navbar-sticky' : ''}`}>
         <div className="container d-flex justify-content-between align-items-center">
           
-          {/* Logo Section */}
+          
           <div className="nav-logo-box">
             <img src={logo} alt="MetaVertex.ai" className="meta-logo-img" />
           </div>
 
-          {/* Desktop Pill Menu */}
+         
           <div className="pill-menu-container d-none d-lg-block">
             <ul className="nav-list-items">
               <li><a href="#home">Home</a></li>
@@ -48,13 +48,12 @@ const Navbar = () => {
             </ul>
           </div>
 
-          {/* Right Button & Mobile Toggle */}
+          
           <div className="nav-right-actions d-flex align-items-center">
             <button className="get-touch-btn d-none d-sm-flex">
               <i className="fa-solid fa-wand-magic-sparkles me-2"></i> Get in Touch
             </button>
             
-            {/* Mobile Hamburger */}
             <button 
               className="mobile-toggle-btn d-lg-none ms-3" 
               onClick={() => setShowMobileMenu(!showMobileMenu)}
@@ -64,7 +63,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        
         <div className={`mobile-menu-overlay ${showMobileMenu ? 'show' : ''}`}>
            <ul className="mobile-nav-links">
               <li><a href="#home" onClick={() => setShowMobileMenu(false)}>Home</a></li>

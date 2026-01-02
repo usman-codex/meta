@@ -1,24 +1,20 @@
-/* src/components/Hero.css */
-
 .hero-fixed-v5 {
     min-height: 100vh;
     background-color: #02010a;
     position: relative;
     overflow: hidden;
-    /* 1. Navbar se thora mazeed niche karne ke liye padding barha di */
     padding-top: 150px; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* 2. Twinkling Stars (Sirf Arc ke upar aur random roshni) */
 .sky-overlay {
     position: absolute; 
     top: 0; 
     left: 0; 
     width: 100%; 
-    height: 70%; /* Sirf arc ke upar wale hisse mein show honge */
+    height: 70%;
     background-image: 
         radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
         radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
@@ -30,12 +26,9 @@
     background-size: 250px 250px;
     opacity: 0.5; 
     z-index: 1;
-    /* Stars ki roshni kam-ziada karne ki animation */
     animation: twinkleStars 4s infinite alternate ease-in-out;
-    /* Niche se fade karne ke liye mask taake arc ke niche na jayen */
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-
 }
 
 @keyframes twinkleStars {
@@ -45,12 +38,13 @@
 }
 
 .hero-container-v5 {
-    position: relative; z-index: 10;
+    position: relative; 
+    z-index: 10;
     width: 100%; 
     display: flex; 
     flex-direction: column; 
     align-items: center;
-    text-align: center; /* 3. Text ko center karne ke liye */
+    text-align: center;
 }
 
 .main-title-v5 {
@@ -65,11 +59,17 @@
     animation: slideUpHero 1s ease;
 }
 
-.italic-light { font-style: italic; font-weight: 300; opacity: 0.8; }
+.italic-light { 
+    font-style: italic; 
+    font-weight: 300; 
+    opacity: 0.8; 
+}
 
-@keyframes slideUpHero { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes slideUpHero { 
+    from { opacity: 0; transform: translateY(50px); } 
+    to { opacity: 1; transform: translateY(0); } 
+}
 
-/* ARC AND BUTTON SECTION - NO CHANGES HERE AS PER YOUR REQUEST */
 .arc-btn-section {
     position: relative;
     width: 100%;
@@ -82,7 +82,8 @@
 
 .glow-arc-line {
     position: absolute;
-    width: 140%; height: 600px;
+    width: 140%; 
+    height: 600px;
     top: -550px; 
     left: -20%;
     border-radius: 50%;
@@ -94,7 +95,10 @@
     animation: arcGlow 3s infinite alternate ease-in-out;
 }
 
-@keyframes arcGlow { from { opacity: 0.6; } to { opacity: 1; } }
+@keyframes arcGlow { 
+    from { opacity: 0.6; } 
+    to { opacity: 1; } 
+}
 
 .arrow-btn-box {
     position: relative;
@@ -104,11 +108,16 @@
 }
 
 .pulse-arrow-circle {
-    width: 65px; height: 65px; border-radius: 50%;
+    width: 65px; 
+    height: 65px; 
+    border-radius: 50%;
     background: rgba(255, 255, 255, 0.05);
     border: 1.5px solid rgba(255, 255, 255, 0.2);
-    color: #fff; font-size: 24px;
-    display: flex; align-items: center; justify-content: center;
+    color: #fff; 
+    font-size: 24px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
     transition: 0.4s all ease;
     animation: bounceSlow 2s infinite ease-in-out;
 }
@@ -116,31 +125,46 @@
 .pulse-arrow-circle:hover {
     border-color: #a855f7;
     background: rgba(168, 85, 247, 0.15);
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.8), 0 0 60px rgba(168, 85, 247, 0.4);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.8), 
+                0 0 60px rgba(168, 85, 247, 0.4);
     transform: scale(1.1);
 }
 
-@keyframes bounceSlow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(12px); } }
+@keyframes bounceSlow { 
+    0%, 100% { transform: translateY(0); } 
+    50% { transform: translateY(12px); } 
+}
 
-/* MARQUEE AT BOTTOM - NO CHANGES HERE */
 .marquee-v5 {
-    width: 100%; overflow: hidden;
-    margin-top: 20px; padding-bottom: 10px;
+    width: 100%; 
+    overflow: hidden;
+    margin-top: 20px; 
+    padding-bottom: 10px;
 }
 
 .marquee-track-v5 {
-    display: flex; gap: 100px; width: max-content;
+    display: flex; 
+    gap: 100px; 
+    width: max-content;
     animation: marqueeMoveV5 30s linear infinite;
 }
 
 .marquee-track-v5 span {
-    font-size: 22px; font-weight: 700; color: #fff; opacity: 0.6;
-    display: flex; align-items: center; gap: 15px; white-space: nowrap;
+    font-size: 22px; 
+    font-weight: 700; 
+    color: #fff; 
+    opacity: 0.6;
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    white-space: nowrap;
 }
 
-@keyframes marqueeMoveV5 { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes marqueeMoveV5 { 
+    from { transform: translateX(0); } 
+    to { transform: translateX(-50%); } 
+}
 
-/* RESPONSIVE */
 @media (max-width: 992px) {
     .main-title-v5 { font-size: 60px; }
     .glow-arc-line { width: 200%; left: -50%; }
