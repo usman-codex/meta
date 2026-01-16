@@ -1,18 +1,6 @@
-/* .hero-fixed-v5 {
-    min-height: 100vh;
-    background-color: #02010a;
-    position: relative;
-    overflow: hidden;
-    padding-top: 150px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
 
-
-/* 1. White Box ko khatam karne ke liye ye property add ki hai */
 .hero-fixed-v5 {
-    min-height: 90vh; 
+    height: 90vh; 
     background-color: #02010a;
     position: relative;
     overflow: hidden;
@@ -50,17 +38,7 @@
     100% { opacity: 0.4; }
 }
 
-/* .hero-container-v5 {
-    position: relative; 
-    z-index: 10;
-    width: 100%; 
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-    text-align: center;
-} */
 
-/* 2. Text Wrapper ko transparent force kiya */
 .hero-container-v5 {
     position: relative; 
     z-index: 10;
@@ -160,20 +138,15 @@
     50% { transform: translateY(12px); } 
 }
 
-/* .marquee-v5 {
-    width: 100%; 
-    overflow: hidden;
-    margin-top: 20px; 
-    padding-bottom: 10px;
-} */
 
 
-/* 3. Marquee aur niche wale section ki space kam karne ke liye margin kam kiya */
+
+
 .marquee-v5 {
     width: 100%; 
     overflow: hidden;
-    margin-top: 20px; /* Space kam kar di */
-    padding-bottom: 0px; /* Bottom space zero */
+    margin-top: 20px; 
+    padding-bottom: 0px; 
     background: transparent !important;
 }
 
