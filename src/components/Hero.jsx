@@ -40,13 +40,13 @@ const Hero = () => {
         
         <div className="marquee-v5">
           <div className="marquee-track-v5">
-            <span><i className="fa-brands fa-openai"></i> OpenAI</span>
+            <span><i className="fa-solid fa-brain"></i> OpenAI</span>
             <span><i className="fa-brands fa-google"></i> Google Cloud</span>
             <span><i className="fa-brands fa-github"></i> GitHub</span>
             <span><i className="fa-brands fa-nvidia"></i> NVIDIA</span>
             <span><i className="fa-brands fa-hubspot"></i> HubSpot</span>
            
-            <span><i className="fa-brands fa-openai"></i> OpenAI</span>
+            <span><i className="fa-solid fa-brain"></i> OpenAI</span>
             <span><i className="fa-brands fa-google"></i> Google Cloud</span>
             <span><i className="fa-brands fa-github"></i> GitHub</span>
             <span><i className="fa-brands fa-nvidia"></i> NVIDIA</span>
