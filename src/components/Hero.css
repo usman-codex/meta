@@ -1,6 +1,6 @@
 
 .hero-fixed-v5 {
-    height: 90vh; 
+    min-height: 90vh; 
     background-color: #02010a;
     position: relative;
     overflow: hidden;
