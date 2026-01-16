@@ -190,7 +190,7 @@
     .services-carousel { height: 500px; }
     .service-v2-card { width: 260px; height: 360px; }
     .service-v2-card.side-left, .service-v2-card.side-right { display: none; } /* Focus on center for mobile */
-    .carousel-arrow { top: auto; bottom: -20px; }
-    .left-arrow { left: 30%; }
-    .right-arrow { right: 30%; }
+    .carousel-arrow { top: auto; bottom: 200px; }
+    .left-arrow { left: 3%; }
+    .right-arrow { right: 3%; }
 }
