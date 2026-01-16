@@ -1,5 +1,5 @@
 .problem-solving-sec {
-    padding: 30px 0 0px;
+    padding: 30px 0 0px ;
     background: radial-gradient(circle at center, #02010a 30%, #0f0f36 100%);
     color: white;
     overflow: hidden;
@@ -150,6 +150,7 @@
     display: flex; 
     justify-content: center; 
     margin-top: 50px; 
+    margin-bottom: 20px;
 }
 
 .bottom-special { 
