@@ -191,3 +191,40 @@
     .main-title-v5 { font-size: 60px; }
     .glow-arc-line { width: 200%; left: -50%; }
 }
+
+
+
+
+
+
+
+@media (max-width: 480px) {
+
+    .hero-fixed-v5 {
+        min-height: auto;
+        padding-top: 90px;
+        padding-bottom: 0;
+    }
+
+    .main-title-v5 {
+        font-size: 38px;
+        letter-spacing: -1px;
+    }
+
+    .glow-arc-line {
+        height: 320px;
+        top: -300px;
+        width: 180%;
+        left: -40%;
+    }
+
+    .arc-btn-section {
+        height: 60px;
+        margin-top: -20px;
+    }
+
+    .marquee-track-v5 span {
+        font-size: 16px;
+        gap: 10px;
+    }
+}
