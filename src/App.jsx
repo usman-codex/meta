@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Stats from './components/Stats';
 import ProblemSolving from './components/ProblemSolving';
 import Services from './components/Services';
+import FutureSection from './components/FutureSection';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Stats />
       <ProblemSolving />
       <Services />
+      <FutureSection />
       
     </div>
   );

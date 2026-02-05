@@ -10,13 +10,13 @@
     align-items: center;
 }
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .hero-fixed-v5 {
         min-height: auto;   
         padding-top: 90px;
         padding-bottom: 0;
     }
-}
+} */
 
 
 
@@ -197,7 +197,7 @@
 
 
 
-/* 
+
 @media (max-width: 480px) {
 
     .hero-fixed-v5 {
@@ -207,8 +207,9 @@
     }
 
     .main-title-v5 {
-        font-size: 38px;
+        
         letter-spacing: -1px;
+       
     }
 
     .glow-arc-line {
@@ -224,8 +225,8 @@
     }
 
     .marquee-track-v5 span {
-        padding-top: 30px;
+        padding-top: 60px;
         font-size: 16px;
         gap: 10px;
     }
-} */
+}   
