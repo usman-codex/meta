@@ -35,7 +35,7 @@ const FutureSection = () => {
        
         <div className={`center-content ${isVisible ? 'zoom-in' : 'zoom-out'}`}>
           <h2 className="future-heading">Let's Build the <br /> Future Together</h2>
-          <h className="start-proj-btn">Start Your Project</h>
+          <span className="start-proj-btn">Start Your Project</span>
         </div>
 
        
