@@ -237,221 +237,20 @@
   }
 }
 
-@media (max-width: 576px) {
-  /* .rings-wrapper {
-    transform: scale(0.6);
-  }
-  .side-badge {
-    position: relative;
-    left: 0 !important;
-    right: 0 !important;
-    top: 0 !important;
-    margin: 10px auto;
-    width: 90%;
-  } */
-  /* .future-container {
-    flex-direction: column;
-    height: auto;
-    padding-top: 100px;
-  } */
-}
-
-/* @media (max-width: 576px) {
-    .rings-wrapper {
-    transform: scale(0.6);
-  }
-  .future-sec {
-    min-height: auto;
-    padding: 70px 0 120px;
-  }
-
-  .future-container {
-    flex-direction: column;
-    gap: 35px;
-  }
-
-
-  .center-content {
-    order: 1;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .rings-wrapper {
-    order: 2;
-    position: relative;
-    height: 420px;
-  }
-
-  .future-heading {
-    font-size: 30px;
-  }
-
-
-  .outer-ring {
-    width: 420px;
-    height: 420px;
-  }
-  .middle-ring {
-    width: 300px;
-    height: 300px;
-  }
-  .inner-ring {
-    width: 200px;
-    height: 200px;
-  }
-
-
-  .left-top {
-    top: 25%;
-    left: 50%;
-    margin-left: -130px;
-  }
-
-  .right-top {
-    top: 88%;
-    left: 50%;
-    margin-left: -130px;
-  }
-
-  .left-bottom {
-    top: 55%;
-    left: 6%;
-  }
-
-  .right-bottom {
-    top: 55%;
-    right: 6%;
-    
-  }
-
-  .bottom-dim-shadow {
-    height: 110px;
-  }
-} */
-/* .............. */
-
-
-/* --- PIXEL PERFECT MOBILE VIEW (Top-to-Bottom Flow) --- */
-/* 
 @media (max-width: 767px) {
-    .future-sec {
-        padding: 60px 0 80px;
-        height: auto;
-        min-height: 100vh;
-        display: flex;
-        align-items: flex-start; 
-    }
-
-    .future-container {
-        flex-direction: column;
-        height: auto;
-        justify-content: flex-start;
-        gap: 0;
-        padding-top: 20px;
-    }
-
    
-    .services-badge { 
-        order: 1;
-        margin-bottom: 15px;
-        font-size: 11px;
-        padding: 4px 15px;
-    }
 
-   
-    .center-content {
-        order: 2;
-        position: relative;
-        width: 100%;
-        margin-bottom: 40px;
-    }
-    .future-heading {
-        font-size: 32px;
-        line-height: 1.2;
-        margin-bottom: 20px;
-    }
-    .start-proj-btn {
-        padding: 8px 25px;
-        font-size: 13px;
-    }
-
-  
-    .rings-wrapper {
-        order: 3;
-        position: relative;
-        width: 90vw; 
-        height: 90vw;
-        max-width: 340px;
-        max-height: 340px;
-        margin: 20px auto 40px; 
-        transform: scale(1);
-    }
-    
-   
-    .outer-ring { width: 100%; height: 100%; }
-    .middle-ring { width: 70%; height: 70%; }
-    .inner-ring { width: 40%; height: 40%; }
-    .orbit-item { width: 32px; height: 32px; padding: 5px; }
-
-  
-    .side-badge {
-        position: absolute !important; 
-        z-index: 50;
-        width: auto;
-        min-width: 160px;
-        padding: 8px 12px;
-    }
-
-    
-    .left-top { 
-        left: 2% !important; 
-        top: 35% !important; 
-    }
-    .left-bottom { 
-        left: 2% !important; 
-        bottom: 5% !important; 
-    }
-    .right-top { 
-        right: 2% !important; 
-        top: 35% !important; 
-    }
-    .right-bottom { 
-        right: 2% !important; 
-        bottom: 5% !important; 
-    }
-
-  
-    .hide-l { transform: translateX(-120%) !important; opacity: 0; }
-    .slide-l { transform: translateX(0) !important; opacity: 1; }
-    
-    .hide-r { transform: translateX(120%) !important; opacity: 0; }
-    .slide-r { transform: translateX(0) !important; opacity: 1; }
-
-    .badge-text strong { font-size: 11px; }
-    .badge-text span { font-size: 9px; }
-    .side-badge img { width: 22px; height: 22px; }
-
-    .bottom-dim-shadow { height: 100px; }
-}
-
-
-@media (max-width: 400px) {
-    .future-heading { font-size: 26px; }
-    .rings-wrapper { max-width: 280px; max-height: 280px; }
-    .side-badge { min-width: 140px; padding: 6px 10px; }
-} */
-
-
-/* --- THE ULTIMATE COMPACT MOBILE RESPONSIVE CODE --- */
-
-@media (max-width: 767px) {
-    .future-sec {
-        padding: 50px 0 80px;
-        height: auto;
-        min-height: 100vh;
-        display: flex;
-        align-items: flex-start;
+     .future-sec {
+       
+        padding: 30px 0 20px !important; 
+        height: auto !important; 
+        min-height: auto !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        position: relative !important;
+        z-index: 50 !important;
+       
     }
 
     .future-container {
@@ -461,102 +260,90 @@
         padding-top: 10px;
     }
 
-    /* 1. TOP TITLE BADGE (Re-ordered to top) */
+    
     .badge-pill-main { 
         order: 1;
-        margin-bottom: 10px !important;
-        font-size: 10px !important;
-        padding: 4px 12px !important;
-        display: inline-block;
+        margin-bottom: 8px !important;
+        font-size: 9px !important;
+        padding: 3px 10px !important;
     }
 
-    /* 2. MAIN HEADING & BUTTON */
     .center-content {
         order: 2;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
     .future-heading {
-        font-size: 28px !important; /* Smaller Heading */
+        font-size: 26px !important;
         line-height: 1.1;
-        margin-bottom: 15px;
     }
     .start-proj-btn {
-        padding: 6px 20px !important;
-        font-size: 12px !important;
+        padding: 5px 18px !important;
+        font-size: 11px !important;
     }
 
-    /* 3. RINGS & ORBITS (Middle) */
     .rings-wrapper {
         order: 3;
         position: relative;
         width: 80vw;
         height: 80vw;
-        max-width: 300px;
-        max-height: 300px;
-        margin: 10px auto 30px;
+        max-width: 280px;
+        max-height: 280px;
+        margin: 10px auto 20px;
     }
     
-    /* Smaller Fluid Rings */
     .outer-ring { width: 100%; height: 100%; }
     .middle-ring { width: 70%; height: 70%; }
     .inner-ring { width: 45%; height: 45%; }
     
-    /* Smaller Orbiting Icons */
     .orbit-item { 
-        width: 28px !important; 
-        height: 28px !important; 
+        width: 24px !important; 
+        height: 24px !important; 
         padding: 4px !important; 
     }
-    .item-1 { top: -14px; } 
-    .item-2 { bottom: -14px; }
-    .item-3 { right: -14px; } 
-    .item-4 { left: -14px; }
+    .item-1 { top: -12px; } .item-2 { bottom: -12px; }
+    .item-3 { right: -12px; } .item-4 { left: -12px; }
 
-    /* 4. COMPACT SIDE BADGES (Micro Sizes) */
+
     .side-badge {
         position: absolute !important;
         z-index: 50;
         width: auto;
-        min-width: 110px; /* Reduced Width */
-        padding: 2px 2px !important; /* Smaller Padding */
-        gap: 4px !important;
-        border-radius: 32px !important; /* Shorter corners */
+        min-width: 100px;
+        padding: 4px 8px !important; 
+        gap: 6px !important;
+        border-radius: 30px !important;
+        
     }
 
-    /* Professional Micro Positioning */
-    .left-top { left: 1% !important; top: 38% !important; }
-    .left-bottom { left: 1% !important; bottom: 8% !important; }
-    .right-top { right: 1% !important; top: 28% !important; }
-    .right-bottom { right: 1% !important; bottom: 19% !important; }
+   
+    .left-top { left: 1% !important; top: 45% !important; }
+    .left-bottom { left: 1% !important; bottom: 10% !important; }
+    .right-top { right: 7% !important; top: 37% !important; }
+    .right-bottom { right: 1% !important; bottom: 15% !important; }
 
-    /* Animation Logic */
-    .hide-l { transform: translateX(-110%) !important; opacity: 0; }
-    .slide-l { transform: translateX(0) !important; opacity: 1; }
-    
-    .hide-r { transform: translateX(110%) !important; opacity: 0; }
-    .slide-r { transform: translateX(0) !important; opacity: 1; }
-
-    /* Small Text Inside Badges */
     .badge-text strong { 
-        font-size: 9px !important; /* Micro Text */
-        white-space: nowrap;
+        font-size: 8px !important; 
+        font-weight: 700;
+        line-height: 1;
     }
     .badge-text span { 
-        font-size: 9px !important; 
-        opacity: 0.7;
+        font-size: 7px !important; 
+        margin-top: 1px;
+        display: block;
     }
     .side-badge img { 
-        width: 12px !important; 
-        height: 12px !important; 
+        width: 14px !important; 
+        height: 14px !important; 
     }
 
-    .bottom-dim-shadow { height: 80px; }
+    .bottom-dim-shadow { height: 60px; }
 }
 
-/* For Very Small Screens (iPhone SE) */
+
 @media (max-width: 380px) {
-    .future-heading { font-size: 24px !important; }
-    .rings-wrapper { max-width: 260px; max-height: 260px; }
-    .side-badge { min-width: 120px; }
+    .future-heading { font-size: 22px !important; }
+    .rings-wrapper { max-width: 250px !important; max-height: 250px !important; }
+    .side-badge { min-width: 100px !important; }
+    .side-badge strong { font-size: 7.5px !important; }
 }
