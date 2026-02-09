@@ -299,7 +299,8 @@
     .orbit-item { 
         width: 24px !important; 
         height: 24px !important; 
-        padding: 4px !important; 
+        padding: 1px !important; 
+        object-fit: contain;
     }
     .item-1 { top: -12px; } .item-2 { bottom: -12px; }
     .item-3 { right: -12px; } .item-4 { left: -12px; }
@@ -346,4 +347,6 @@
     .rings-wrapper { max-width: 250px !important; max-height: 250px !important; }
     .side-badge { min-width: 100px !important; }
     .side-badge strong { font-size: 7.5px !important; }
+    .badge-text span { font-size: 6px !important;}
+    
 }
