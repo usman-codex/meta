@@ -34,19 +34,24 @@
   align-items: center;
   justify-content: center;
 }
+
 .outer-ring {
   width: 750px;
   height: 750px;
   border-color: rgba(168, 85, 247, 0.3);
-  box-shadow: 0 0 40px rgba(168, 85, 247, 0.1);
+  animation: orbit-anti 25s linear infinite;
 }
+
 .middle-ring {
   width: 550px;
   height: 550px;
+  animation: orbit-anti 18s linear infinite reverse;
 }
+
 .inner-ring {
   width: 350px;
   height: 350px;
+  animation: orbit-anti 12s linear infinite;
 }
 
 .orbit-item {
@@ -56,69 +61,36 @@
   background: #fff;
   border-radius: 50%;
   padding: 8px;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  animation: counter-rotate 25s linear infinite;
 }
+
 .orbit-item img {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-.outer-ring {
-  animation: orbit-anti 25s linear infinite;
-}
-.middle-ring {
-  animation: orbit-anti 18s linear infinite reverse;
-}
-.inner-ring {
-  animation: orbit-anti 12s linear infinite;
-}
-
 @keyframes orbit-anti {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
 }
 
-.orbit-item {
-  animation: counter-rotate 25s linear infinite;
-}
-.middle-ring .orbit-item {
-  animation: counter-rotate 18s linear infinite;
-}
-.inner-ring .orbit-item {
-  animation: counter-rotate 12s linear infinite;
-}
 @keyframes counter-rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-.item-aws {
-  top: -22px;
-}
-.item-firebase {
-  bottom: -22px;
-}
-.item-flutter {
-  right: -22px;
-}
-.item-mongo {
-  left: -22px;
-}
+.item-aws { top: -22px; }
+.item-firebase { bottom: -22px; }
+.item-flutter { right: -22px; }
+.item-mongo { left: -22px; }
 
 .center-content {
   z-index: 10;
   text-align: center;
   transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .future-heading {
   font-size: 55px;
   font-weight: 800;
@@ -126,14 +98,9 @@
   line-height: 1.1;
   margin-bottom: 30px;
 }
-.zoom-in {
-  opacity: 1;
-  transform: scale(1);
-}
-.zoom-out {
-  opacity: 0;
-  transform: scale(0.7);
-}
+
+.zoom-in { opacity: 1; transform: scale(1); }
+.zoom-out { opacity: 0; transform: scale(0.7); }
 
 .start-proj-btn {
   background: linear-gradient(135deg, #1e134a 0%, #0a0520 100%);
@@ -142,14 +109,12 @@
   padding: 6px 20px;
   border-radius: 50px;
   font-weight: bold;
-  box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);
 }
 
 .side-badge {
   position: absolute;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
   background: linear-gradient(135deg, #3a2e6a 0%, #0a0520 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 7px 12px;
   border-radius: 50px;
   display: flex;
@@ -158,54 +123,20 @@
   z-index: 15;
   transition: all 0.8s ease;
 }
-.side-badge img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-.side-badge strong {
-  font-size: 14px;
-  display: block;
-  color: #fff;
-}
-.side-badge span {
-  font-size: 11px;
-  color: #aaa;
-}
 
-.left-top {
-  left: 10%;
-  top: 25%;
-}
-.left-bottom {
-  left: 15%;
-  bottom: 30%;
-}
-.right-top {
-  right: 20%;
-  top: 15%;
-}
-.right-bottom {
-  right: 5%;
-  bottom: 40%;
-}
+.side-badge img { width: 30px; height: 30px; border-radius: 50%; }
+.side-badge strong { font-size: 14px; display: block; color: #fff; }
+.side-badge span { font-size: 11px; color: #aaa; }
 
-.slide-l {
-  opacity: 1;
-  transform: translateX(0);
-}
-.hide-l {
-  opacity: 0;
-  transform: translateX(-80px);
-}
-.slide-r {
-  opacity: 1;
-  transform: translateX(0);
-}
-.hide-r {
-  opacity: 0;
-  transform: translateX(80px);
-}
+.left-top { left: 10%; top: 25%; }
+.left-bottom { left: 15%; bottom: 30%; }
+.right-top { right: 20%; top: 15%; }
+.right-bottom { right: 5%; bottom: 40%; }
+
+.slide-l { opacity: 1; transform: translateX(0); }
+.hide-l { opacity: 0; transform: translateX(-80px); }
+.slide-r { opacity: 1; transform: translateX(0); }
+.hide-r { opacity: 0; transform: translateX(80px); }
 
 .bottom-dim-shadow {
   position: absolute;
@@ -215,138 +146,84 @@
   background: linear-gradient(to top, #02010a 20%, transparent);
 }
 
-@media (max-width: 992px) {
-  .outer-ring {
-    width: 500px;
-    height: 500px;
-  }
-  .middle-ring {
-    width: 350px;
-    height: 350px;
-  }
-  .inner-ring {
-    width: 220px;
-    height: 220px;
-  }
-  .future-heading {
-    font-size: 36px;
-  }
-  .side-badge {
-    padding: 8px 15px;
-    font-size: 12px;
-  }
+@media (max-width: 1200px) {
+  .future-container { height: 750px; }
+  .outer-ring { width: 650px; height: 650px; }
+  .middle-ring { width: 480px; height: 480px; }
+  .inner-ring { width: 310px; height: 310px; }
+  .future-heading { font-size: 48px; }
+  .left-top { left: 5%; top: 22%; }
+  .left-bottom { left: 8%; bottom: 25%; }
+  .right-top { right: 12%; top: 15%; }
+  .right-bottom { right: 5%; bottom: 35%; }
+}
+
+@media (max-width: 991px) {
+  .future-sec { padding: 30px 0; }
+  .future-container { height: 650px; }
+  .outer-ring { width: 520px; height: 520px; }
+  .middle-ring { width: 380px; height: 380px; }
+  .inner-ring { width: 240px; height: 240px; }
+  .future-heading { font-size: 38px; }
+  .side-badge { padding: 8px 16px; font-size: 12px; }
+  .left-top { left: 2%; top: 20%; }
+  .left-bottom { left: 4%; bottom: 20%; }
+  .right-top { right: 5%; top: 12%; }
+  .right-bottom { right: 2%; bottom: 30%; }
+  .orbit-item { width: 35px; height: 35px; padding: 6px; }
 }
 
 @media (max-width: 767px) {
-   
-
-     .future-sec {
-       
-        padding: 30px 0 20px !important; 
-        height: auto !important; 
-        min-height: auto !important; 
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        position: relative !important;
-        z-index: 50 !important;
-       
-    }
-
-    .future-container {
-        flex-direction: column;
-        height: auto;
-        justify-content: flex-start;
-        padding-top: 10px;
-    }
-
-    
-    .badge-pill-main { 
-        order: 1;
-        margin-bottom: 8px !important;
-        font-size: 9px !important;
-        padding: 3px 10px !important;
-    }
-
-    .center-content {
-        order: 2;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    .future-heading {
-        font-size: 26px !important;
-        line-height: 1.1;
-    }
-    .start-proj-btn {
-        padding: 5px 18px !important;
-        font-size: 11px !important;
-    }
-
-    .rings-wrapper {
-        order: 3;
-        position: relative;
-        width: 80vw;
-        height: 80vw;
-        max-width: 280px;
-        max-height: 280px;
-        margin: 10px auto 20px;
-    }
-    
-    .outer-ring { width: 100%; height: 100%; }
-    .middle-ring { width: 70%; height: 70%; }
-    .inner-ring { width: 45%; height: 45%; }
-    
-    .orbit-item { 
-        width: 24px !important; 
-        height: 24px !important; 
-        padding: 1px !important; 
-        object-fit: contain;
-    }
-    .item-1 { top: -12px; } .item-2 { bottom: -12px; }
-    .item-3 { right: -12px; } .item-4 { left: -12px; }
-
-
-    .side-badge {
-        position: absolute !important;
-        z-index: 50;
-        width: auto;
-        min-width: 100px;
-        padding: 4px 8px !important; 
-        gap: 6px !important;
-        border-radius: 30px !important;
-        
-    }
-
-   
-    .left-top { left: 1% !important; top: 45% !important; }
-    .left-bottom { left: 1% !important; bottom: 10% !important; }
-    .right-top { right: 7% !important; top: 37% !important; }
-    .right-bottom { right: 1% !important; bottom: 15% !important; }
-
-    .badge-text strong { 
-        font-size: 8px !important; 
-        font-weight: 700;
-        line-height: 1;
-    }
-    .badge-text span { 
-        font-size: 7px !important; 
-        margin-top: 1px;
-        display: block;
-    }
-    .side-badge img { 
-        width: 14px !important; 
-        height: 14px !important; 
-    }
-
-    .bottom-dim-shadow { height: 60px; }
+  .future-sec {
+    padding: 30px 0 20px !important;
+    height: auto !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    position: relative !important;
+    z-index: 50 !important;
+  }
+  .future-container {
+    flex-direction: column;
+    height: auto;
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+  .center-content { order: 2; width: 100%; margin-bottom: 20px; }
+  .future-heading { font-size: 26px !important; }
+  .rings-wrapper {
+    order: 3;
+    position: relative;
+    width: 80vw;
+    height: 80vw;
+    max-width: 280px;
+    max-height: 280px;
+  }
+  .outer-ring { width: 100% !important; height: 100% !important; }
+  .middle-ring { width: 70% !important; height: 70% !important; }
+  .inner-ring { width: 45% !important; height: 45% !important; }
+  .orbit-item { width: 24px !important; height: 24px !important; padding: 1px !important; }
+  .side-badge {
+    position: absolute !important;
+    z-index: 50;
+    min-width: 100px;
+    padding: 4px 8px !important;
+    border-radius: 30px !important;
+  }
+  .left-top { left: 1% !important; top: 45% !important; }
+  .left-bottom { left: 1% !important; bottom: 10% !important; }
+  .right-top { right: 7% !important; top: 37% !important; }
+  .right-bottom { right: 1% !important; bottom: 15% !important; }
+  .badge-text strong { font-size: 8px !important; font-weight: 700; }
+  .badge-text span { font-size: 7px !important; display: block; }
+  .side-badge img { width: 14px !important; height: 14px !important; }
+  .bottom-dim-shadow { height: 60px; }
 }
 
-
 @media (max-width: 380px) {
-    .future-heading { font-size: 22px !important; }
-    .rings-wrapper { max-width: 250px !important; max-height: 250px !important; }
-    .side-badge { min-width: 100px !important; }
-    .side-badge strong { font-size: 7.5px !important; }
-    .badge-text span { font-size: 6px !important;}
-    
+  .future-heading { font-size: 22px !important; }
+  .rings-wrapper { max-width: 250px !important; max-height: 250px !important; }
+  .side-badge strong { font-size: 7.5px !important; }
+  .badge-text span { font-size: 6px !important; }
 }
