@@ -57,6 +57,10 @@
     justify-content: center;
     align-items: center;
     z-index: 5;
+      /* --- NEW TOUCH FIX PROPERTIES --- */
+    touch-action: pan-y; /* Browser ko kahe ga ke horizontal swipe hamara code handle kare ga */
+    user-select: none;   /* Swipe karte waqt text select nahi hoga */
+    -webkit-user-drag: none;
 }
 
 /* HORIZONTAL LONG CARDS STYLING */
@@ -71,6 +75,7 @@
     text-align: center;
     transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
+    pointer-events: auto;
 }
 
 .testimonial-card-v2.activeCard {

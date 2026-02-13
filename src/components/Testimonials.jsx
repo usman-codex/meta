@@ -34,30 +34,41 @@ const Testimonials = () => {
     return () => observer.disconnect();
   }, []);
 
-  const handleTouchStart = (e) => setTouchStart(e.targetTouches[0].clientX);
-  const handleTouchMove = (e) => {
-    const touchEnd = e.targetTouches[0].clientX;
-    if (touchStart - touchEnd > 70) setActiveIndex((prev) => (prev + 1) % data.length);
-    if (touchStart - touchEnd < -70) setActiveIndex((prev) => (prev - 1 + data.length) % data.length);
-    setTouchStart(touchEnd);
+  const handleTouchStart = (e) => {
+  setTouchStart(e.targetTouches[0].clientX);
+};
+
+const handleTouchEnd = (e) => {
+  const touchEnd = e.changedTouches[0].clientX;
+  const swipeThreshold = 50; // Thora sa swipe karne par bhi change ho jaye ga
+
+  if (touchStart - touchEnd > swipeThreshold) {
+    // Swipe Left -> Next Card
+    setActiveIndex((prev) => (prev + 1) % data.length);
+  } else if (touchStart - touchEnd < -swipeThreshold) {
+    // Swipe Right -> Previous Card
+    setActiveIndex((prev) => (prev - 1 + data.length) % data.length);
+  }
   };
 
   return (
     <section className="testimonials-sec" ref={sectionRef} id="portfolio">
       <div className="container text-center content-main">
-        {/* Header Part */}
+      
         <div className="badge-testimonials mb-2">Testimonials</div>
         <h2 className={`testimonial-heading ${isVisible ? 'fade-up' : 'fade-down'}`}>
           Don't Trust Us, Trust <br /> <span>Their Voice</span>
         </h2>
 
-        {/* Map & Cards Area */}
+    
         <div className="interactive-area">
-          {/* Map starts below heading */}
+        
           <div className="map-background" style={{ backgroundImage: `url(${mapImg})` }}></div>
 
-          {/* Cards on top of Map */}
-          <div className="testimonials-wrapper" onTouchStart={handleTouchStart} onTouchMove={handleTouchMove}>
+        
+          <div className="testimonials-wrapper" 
+  onTouchStart={handleTouchStart} 
+  onTouchEnd={handleTouchEnd}>
             {data.map((item, index) => {
               let position = "nextCard";
               if (index === activeIndex) position = "activeCard";
@@ -74,7 +85,7 @@ const Testimonials = () => {
           </div>
         </div>
 
-        {/* Indicators */}
+    
         <div className="slider-dots">
           {data.map((_, i) => (
             <div key={i} className={`dot-item ${i === activeIndex ? 'active' : ''}`} onClick={() => setActiveIndex(i)}></div>
