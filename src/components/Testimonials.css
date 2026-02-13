@@ -1,0 +1,147 @@
+.testimonials-sec {
+    min-height: auto;
+    padding: 30px 0 20px 0;
+    background-color: #060221;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-main { position: relative; z-index: 10; width: 100%; }
+
+.badge-testimonials {
+    background: linear-gradient(135deg, #1e134a 0%, #0a0520 100%);
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    padding: 5px 18px;
+    border-radius: 50px;
+    display: inline-block;
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.testimonial-heading { font-size: 48px; font-weight: 800; color: #fff; line-height: 1.1; transition: 0.8s; }
+.testimonial-heading span { color: #999; }
+
+.fade-up { opacity: 1; transform: translateY(0); }
+.fade-down { opacity: 0; transform: translateY(40px); }
+
+/* INTERACTIVE AREA */
+.interactive-area {
+    height: 400px; /* Height kam kar di vertical space bachane ke liye */
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .map-background {
+    position: absolute;
+    bottom: -20px;
+    width: 160%;
+    height: 140%; 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    opacity: 0.6;
+    z-index: 1;
+    pointer-events: none;
+} 
+
+
+.testimonials-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+/* HORIZONTAL LONG CARDS STYLING */
+.testimonial-card-v2 {
+    position: absolute;
+    width: 550px; /* Lamba Horizontal Width */
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    border-radius: 24px;
+    padding: 25px 40px; /* Vertical padding kam, Horizontal zyada */
+    text-align: center;
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.testimonial-card-v2.activeCard {
+    z-index: 10;
+    transform: scale(1) translateX(0);
+    opacity: 1;
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+/* Offsets barhaye gaye hain taake lambay cards overlap na karein */
+.testimonial-card-v2.prevCard {
+    z-index: 2;
+    transform: scale(0.8) translateX(-550px);
+    opacity: 0.3;
+}
+
+.testimonial-card-v2.nextCard {
+    z-index: 2;
+    transform: scale(0.8) translateX(550px);
+    opacity: 0.3;
+}
+
+.testimonial-card-v2 h3 { font-size: 24px; font-weight: 700; margin-bottom: 10px; color: #fff; }
+.testimonial-card-v2 p { 
+    font-size: 14px; 
+    color: rgba(255, 255, 255, 0.7); 
+    line-height: 1.4; 
+    margin-bottom: 15px; 
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.client-footer strong { color: #fff; font-size: 15px; letter-spacing: 0.5px; opacity: 0.9;}
+
+/* INDICATORS */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 5px;
+}
+.dot-item {
+    width: 35px; height: 3px; background: rgba(255,255,255,0.1); transition: 0.4s; cursor: pointer;
+}
+.dot-item.active { background: #fff; width: 60px; }
+
+/* --- RESPONSIVE MEDIA KEYS --- */
+
+@media (max-width: 1200px) {
+    .testimonial-card-v2 { width: 480px; }
+    .testimonial-card-v2.prevCard { transform: scale(0.8) translateX(-450px); }
+    .testimonial-card-v2.nextCard { transform: scale(0.8) translateX(450px); }
+}
+
+@media (max-width: 991px) {
+    .testimonial-heading { font-size: 38px; }
+    .testimonial-card-v2 { width: 420px; padding: 20px; }
+    .testimonial-card-v2.prevCard { transform: scale(0.75) translateX(-380px); }
+    .testimonial-card-v2.nextCard { transform: scale(0.75) translateX(380px); }
+}
+
+@media (max-width: 767px) {
+    .testimonial-heading { font-size: 30px; }
+    .testimonial-card-v2 { 
+        width: 88vw; 
+        padding: 20px 15px;
+    }
+    .testimonial-card-v2 h3 { font-size: 18px; }
+    .testimonial-card-v2 p { font-size: 12px; }
+    
+    .testimonial-card-v2.prevCard { transform: scale(0.85) translateX(-95%); opacity: 0.1; }
+    .testimonial-card-v2.nextCard { transform: scale(0.85) translateX(95%); opacity: 0.1; }
+}

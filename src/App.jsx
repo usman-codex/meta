@@ -6,6 +6,7 @@ import Stats from './components/Stats';
 import ProblemSolving from './components/ProblemSolving';
 import Services from './components/Services';
 import FutureSection from './components/FutureSection';
+import Testimonials from './components/Testimonials';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <ProblemSolving />
       <Services />
       <FutureSection />
+      <Testimonials />
       
     </div>
   );
