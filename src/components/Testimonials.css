@@ -133,7 +133,7 @@
     .testimonial-card-v2.nextCard { transform: scale(0.75) translateX(380px); }
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
     .testimonial-heading { font-size: 30px; }
     .testimonial-card-v2 { 
         width: 88vw; 
@@ -144,4 +144,63 @@
     
     .testimonial-card-v2.prevCard { transform: scale(0.85) translateX(-95%); opacity: 0.1; }
     .testimonial-card-v2.nextCard { transform: scale(0.85) translateX(95%); opacity: 0.1; }
+} */
+
+
+/* --- MOBILE VIEW: CENTER OVERLAP EFFECT --- */
+
+@media (max-width: 767px) {
+    .testimonial-heading { font-size: 30px; margin-bottom: 5px; }
+    
+    .interactive-area { 
+        height: 480px; /* Thori height barhayi taake mobile text fit ho jaye */
+        margin-top: 15px;
+    }
+
+    .testimonial-card-v2 { 
+        width: 78vw; /* Center card thora chota kiya taake side wale nazar ayen */
+        padding: 25px 15px;
+        backdrop-filter: blur(10px);
+    }
+
+    /* CENTER CARD: Sab ke upar aur full visible */
+    .testimonial-card-v2.activeCard { 
+        z-index: 10; 
+        transform: scale(1.05) translateX(0); 
+        opacity: 1;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.9);
+    }
+
+    /* SIDE CARDS: Adha nazar ayenge aur center ke piche honge */
+    .testimonial-card-v2.prevCard { 
+        z-index: 1; 
+        transform: scale(0.85) translateX(-70%); /* -70% se ye adha bahr nikal jayega */
+        opacity: 0.3; 
+    }
+
+    .testimonial-card-v2.nextCard { 
+        z-index: 1; 
+        transform: scale(0.85) translateX(70%); /* 70% se ye adha bahr nikal jayega */
+        opacity: 0.3; 
+    }
+
+    .testimonial-card-v2 h3 { font-size: 19px; margin-bottom: 10px; }
+    .testimonial-card-v2 p { font-size: 12.5px; line-height: 1.4; }
+    .client-footer strong { font-size: 13px; }
+
+    /* Progress Dots */
+    .dot-item { width: 25px; }
+    .dot-item.active { width: 45px; }
+}
+
+/* Extra Small (iPhone SE / Below 400px) */
+@media (max-width: 400px) {
+    .testimonial-heading { font-size: 26px; }
+    .testimonial-card-v2 { width: 82vw; } /* Choti screen par adha dikhane ke liye munasib width */
+    
+    .testimonial-card-v2.prevCard { transform: scale(0.8) translateX(-75%); }
+    .testimonial-card-v2.nextCard { transform: scale(0.8) translateX(75%); }
+    
+    .testimonial-card-v2 h3 { font-size: 17px; }
+    .testimonial-card-v2 p { font-size: 11px; }
 }
