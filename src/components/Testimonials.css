@@ -37,8 +37,8 @@
 }
  .map-background {
     position: absolute;
-    bottom: -20px;
-    width: 160%;
+    bottom: -100px;
+    width: 220%;
     height: 140%; 
     background-size: contain;
     background-repeat: no-repeat;
@@ -153,13 +153,13 @@
     .testimonial-heading { font-size: 30px; margin-bottom: 5px; }
     
     .interactive-area { 
-        height: 480px; /* Thori height barhayi taake mobile text fit ho jaye */
-        margin-top: 15px;
+        height: 380px; /* Thori height barhayi taake mobile text fit ho jaye */
+        margin-top: 5px;
     }
 
     .testimonial-card-v2 { 
         width: 78vw; /* Center card thora chota kiya taake side wale nazar ayen */
-        padding: 25px 15px;
+        padding: 20px 15px;
         backdrop-filter: blur(10px);
     }
 
@@ -174,13 +174,13 @@
     /* SIDE CARDS: Adha nazar ayenge aur center ke piche honge */
     .testimonial-card-v2.prevCard { 
         z-index: 1; 
-        transform: scale(0.85) translateX(-70%); /* -70% se ye adha bahr nikal jayega */
+        transform: scale(0.85) translateX(-75%); /* -70% se ye adha bahr nikal jayega */
         opacity: 0.3; 
     }
 
     .testimonial-card-v2.nextCard { 
         z-index: 1; 
-        transform: scale(0.85) translateX(70%); /* 70% se ye adha bahr nikal jayega */
+        transform: scale(0.85) translateX(75%); /* 70% se ye adha bahr nikal jayega */
         opacity: 0.3; 
     }
 
@@ -191,6 +191,9 @@
     /* Progress Dots */
     .dot-item { width: 25px; }
     .dot-item.active { width: 45px; }
+       .slider-dots {
+        margin-top: -10px; /* Dots ko card ke mazeed kareeb kar diya */
+    }
 }
 
 /* Extra Small (iPhone SE / Below 400px) */
