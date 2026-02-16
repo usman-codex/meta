@@ -112,7 +112,7 @@
 }
 
 @media (max-width: 767px) {
-    .faq-section { padding: 50px 0; }
+    .faq-section { padding: 30px 0; }
     .faq-main-heading { font-size: 32px; }
     .faq-item { padding: 20px 25px; }
     .faq-question-row h3 { font-size: 17px; }
