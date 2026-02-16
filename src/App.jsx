@@ -7,7 +7,7 @@ import ProblemSolving from './components/ProblemSolving';
 import Services from './components/Services';
 import FutureSection from './components/FutureSection';
 import Testimonials from './components/Testimonials';
-
+import FAQ from './components/FAQ';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <Services />
       <FutureSection />
       <Testimonials />
-      
+      <FAQ />
     </div>
   );
 }
