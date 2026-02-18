@@ -8,6 +8,7 @@ import Services from './components/Services';
 import FutureSection from './components/FutureSection';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <FutureSection />
       <Testimonials />
       <FAQ />
+      <Footer />
     </div>
   );
 }

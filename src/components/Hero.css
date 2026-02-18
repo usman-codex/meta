@@ -10,16 +10,6 @@
     align-items: center;
 }
 
-/* @media (max-width: 480px) {
-    .hero-fixed-v5 {
-        min-height: auto;   
-        padding-top: 90px;
-        padding-bottom: 0;
-    }
-} */
-
-
-
 .sky-overlay {
     position: absolute; 
     top: 0; 
